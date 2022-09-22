@@ -1,15 +1,14 @@
 list_strings = ['qtring_one','string_two','string_three','string_four','string_five']
-for each_string in list_strings:
-    print(each_string)
 
 def string_printer(one_string):
     if (one_string.startswith('q')):
         print(one_string ,', q found')
 
-string_printer('god bless you')
-
 for each_string in list_strings:
     string_printer(each_string)
+
+string_printer('god bless you')
+
 
 list_dictionaries = [
     {
@@ -30,9 +29,10 @@ list_dictionaries = [
     ]
 
 def dictionary_printer(dictionaries):
+    new_list = []
     for each_dictionary in dictionaries:
-        if(each_dictionary["is_subscribed"] == True):
-            new_list = each_dictionary
-            print(new_list)
+        if(each_dictionary['is_subscribed'] == True):
+            new_list.append(each_dictionary)
+    return new_list
 
-dictionary_printer(list_dictionaries)
+print(dictionary_printer(list_dictionaries))
